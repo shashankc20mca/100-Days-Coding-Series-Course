@@ -1,0 +1,31 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    int x1,y1,x2,y2,x3,y3,d;
+    cout<<"Enter the first fraction value with space"<<endl;
+    cin>>x1>>y1;
+    cout<<"Enter the second fraction value with space"<<endl;
+    cin>>x2>>y2;
+
+ x3 = (x1*y2) + (x2*y1);
+ y3 = (y1*y2);
+ if(x3>y3){
+    d=y3;
+ }
+ else{
+    d=x3;
+ }
+ for(int i=d;i>0;i--)
+{
+    if((x3%i==0)&(y3%i==0)){
+        x3=x3/i;
+        y3=y3/i;
+    }
+}
+cout<<"The fraction is "<<x3<<"/"<<y3<<endl;
+
+
+
+   return 0;
+}
