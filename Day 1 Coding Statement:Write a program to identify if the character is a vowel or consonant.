@@ -1,0 +1,23 @@
+#include<iostream>
+using namespace std;
+
+int main(){
+    char mych;
+
+    cout<<"Enter the character"<<endl;
+    cin>>mych;
+
+    if((mych>='A')&(mych<='z')){
+            if(mych=='a'||mych=='e'||mych=='i'||mych=='o'||mych=='u'||mych=='A'||mych=='E'||mych=='I'||mych=='O'||mych=='u')
+            {
+                cout<<"Vowels"<<endl;
+            }
+    else{
+
+        cout<<"Consonents"<<endl;
+    }}
+    else{
+        cout<<"invalid character"<<endl;
+    }
+    return 0;
+    }
