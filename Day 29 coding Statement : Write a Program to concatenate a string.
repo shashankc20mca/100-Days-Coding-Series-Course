@@ -1,0 +1,32 @@
+#include<iostream>
+#include<string>
+using namespace std;
+int main()
+{
+
+    string s,n,st;
+    cout<<"Enter the first string"<<endl;
+    getline(cin,s);
+    cout<<"Enter the second string"<<endl;
+    getline(cin,n);
+    st=s+n;
+    cout<<st;
+}
+
+///method 2
+
+#include<iostream>
+#include<string>
+using namespace std;
+int main()
+{
+ char str1[50];
+ char str2[50];
+ cout<<"Enter first string: ";
+ cin>>str1;
+ cout<<"Enter second string: ";
+ cin>>str2;
+ strcat(str1,str2);
+ cout<<"Concatenated string: "<<str1;
+ return 0;
+}
