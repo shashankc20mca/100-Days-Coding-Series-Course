@@ -1,0 +1,21 @@
+#include<iostream>
+using namespace std;
+int main(){
+int n,f=0;
+cout<<"Enter the number"<<endl;
+cin>>n;
+for(int i=1;i<=n/2;i++){
+    if(n%i==0){
+        f=f+i;
+        cout<<i<<" ";
+    }
+
+}
+cout<<endl;
+cout<<f<<endl;
+if(f==n){
+    cout<<"perfect number"<<endl;
+}
+else{
+    cout<<"Not perfect number"<<endl;
+}
