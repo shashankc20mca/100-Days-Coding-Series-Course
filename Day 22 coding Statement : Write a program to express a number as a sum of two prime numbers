@@ -1,0 +1,46 @@
+#include<iostream>
+using namespace std;
+int main(){
+    int n,t=1,b=2,c=0;
+    cout<<"Enter the number"<<endl;
+    cin>>n;
+    int a[n],p=1;
+    for(int i=2;i<n;i++){int s=0;
+        for(int j=1;j<=i;j++){
+            if(i%j==0){
+                s++;
+            }
+
+        }
+        if(s==2){
+            a[p]=i;
+
+            p++;
+
+        }
+    }
+
+    for(int i=t;i<p-1;i++){
+             if(a[i]+a[i]==n){
+                cout<<a[i]<<" + "<<a[i]<<" = "<<n<<endl;
+    c++;
+
+            }
+        for(int j=b;j<=p-1;j++){
+
+            if(a[i]+a[j]==n){
+                 cout<<a[i]<<" + "<<a[j]<<" = "<<n<<endl;
+                 c++;
+            }
+
+        }
+        t++;
+        b++;
+    }
+    if(c==0){
+        cout<<"can't be expressed as sum of two prime numbers"<<endl;
+    }
+
+
+return 0;
+}
