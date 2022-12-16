@@ -1,0 +1,25 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    int x,y;
+    cout<<"Enter the value of x and y"<<endl;
+    cin>>x>>y;
+    if((x>0)&(y>0))
+    {
+        cout<<"The point lies in the First quadrant"<<endl;
+
+    }
+    else if((x<0)&(y>0))
+        {
+            cout<<"The point lies in the Second quadrant"<<endl;
+
+    }
+    else if ((x<0)&(y<0))
+        {
+    cout<<"The point lies in the third quadrant"<<endl;}
+    else{
+        cout<<"The point lies in the Fourth quadrant"<<endl;
+    }
+    return 0;
+    }
