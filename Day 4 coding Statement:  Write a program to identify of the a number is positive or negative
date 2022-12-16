@@ -1,0 +1,18 @@
+#include<iostream>
+using namespace std;
+int main(){
+int a;
+cout<<"enter the number"<<endl;
+cin>>a;
+if(a<0){
+    cout<<"Negative number"<<endl;
+}
+else if(a==0){
+        cout<<"Neither positive or negative"<<endl;
+}
+else{
+    cout<<"positive number"<<endl;
+}
+
+return 0;
+}
