@@ -1,0 +1,12 @@
+#include<iostream>
+using namespace std;
+int main(){
+char c;
+int s;
+cout<<"Enter the character"<<endl;
+cin>>c;
+s=int(c);
+cout<<"ASCII value of the character is "<<s<<endl;
+
+return 0;
+}
