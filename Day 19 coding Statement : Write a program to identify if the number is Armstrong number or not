@@ -1,0 +1,63 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+int a,r,s=0,m=0;
+cout<<"Enter the number"<<endl;
+cin>>a;
+int n=a,d=a;
+while(a>0){
+        a=a/10;
+    m++;
+}
+
+while(d>0){
+
+    r=d%10;
+    int n=1;
+    for(int i=1;i<=m;i++){
+       n=n*r;
+    }
+    s=s+n;
+    d=d/10;
+}
+cout<<s<<endl;
+if(n==s){
+    cout<<"Armstrong number"<<endl;
+}
+else{
+    cout<<"Not Armstrong number"<<endl;
+}
+return 0;
+}
+
+
+//////////////////method 2
+
+#include <iostream>
+#include<math.h>
+using namespace std;
+int main()
+{
+ int num, copy, rem, result = 0, n = 0 ;
+ cout<<"Enter a number: ";
+ cin>>num;
+ copy = num;
+ while (num != 0)
+ {
+ num /= 10;
+ n++;
+ }
+ num = copy;
+ while (num != 0)
+ {
+ rem = num%10;
+ result += pow(rem, n);//pow function used to rise the first variable to the power of the second variable
+ num /= 10;
+ }
+ if(result == copy)
+ cout<<"Armstrong number";
+ else
+ cout<<"Not an Armstrong number";
+return 0;
+}
