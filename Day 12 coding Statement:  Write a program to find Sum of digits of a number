@@ -1,0 +1,17 @@
+#include<iostream>
+using namespace std;
+int  main(){
+    int a,r=0;
+    cout<<"Enter the number"<<endl;
+    cin>>a;
+    while(a>0){
+            r=r+(a%10);
+    a=(a/10);
+
+    }
+    cout<<r;
+
+
+
+return 0;
+}
