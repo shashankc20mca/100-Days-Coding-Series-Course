@@ -2,26 +2,20 @@
 #include<string>
 using namespace std;
 int main(){
-string s,r="";
-cout<<"Enter the string "<<endl;
-cin>>s;
-int m;
-m=(s.length()-1);
-for(int i=m;i>=0;i--){
-    if(s[i]=='a'|s[i]=='e'|s[i]=='i'|s[i]=='o'|s[i]=='u'){
-        s.pop_back();
+string s;
+cout<<"Enter the string"<<endl;
+getline(cin,s);
+for(int i=0;i<s.length();i++){
+    if((s[i]>='A')&(s[i]<='Z')){
+        s[i]=tolower(s[i]);
     }
     else{
-        r.push_back(s[i]);
+        s[i]=toupper(s[i]);
     }
 }
-int o;
-s="";
-o=(r.length()-1);
-for(int k=o;k>=0;k--){
-   s.push_back(r[k]);
-
-}
 cout<<s;
+
+
+
 return 0;
 }
