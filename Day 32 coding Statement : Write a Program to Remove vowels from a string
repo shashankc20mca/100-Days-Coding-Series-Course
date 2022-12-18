@@ -1,0 +1,28 @@
+#include<iostream>
+#include<string>
+using namespace std;
+int main(){
+string s,r="";
+cout<<"Enter the string "<<endl;
+cin>>s;
+int m;
+m=(s.length()-1);
+for(int i=m;i>=0;i--){
+    if(s[i]=='a'|s[i]=='e'|s[i]=='i'|s[i]=='o'|s[i]=='u'|s[i]=='A'|s[i]=='E'|s[i]=='I'|s[i]=='O'|s[i]=='U'){
+        s.pop_back();
+    }
+    else{
+        r.push_back(s[i]);
+    }
+}
+int o;
+s="";
+o=(r.length()-1);
+for(int k=o;k>=0;k--){
+   s.push_back(r[k]);
+
+}
+cout<<s;
+return 0;
+}
+
