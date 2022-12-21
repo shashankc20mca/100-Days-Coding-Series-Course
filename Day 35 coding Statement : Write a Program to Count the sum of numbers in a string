@@ -1,0 +1,80 @@
+#include<iostream>
+#include<string>
+#include<cctype>
+using namespace std;
+int main(){
+    string s;
+    int sum=0;
+    cout<<"Enter the string"<<endl;
+    getline(cin,s);
+
+    for(int i=0;i<s.length();i++){
+    
+         if(isdigit(s[i])){// the isdigit () function, declared in the <cctype> header file in C++, is used to determine whether the provided character represents a decimal digit.
+               string m;
+               m=s[i];
+               int a=stoi(m);//stoi converts string to integer
+                sum=sum+a;
+            }
+
+    }
+
+cout<<sum;
+
+
+return 0;
+}
+
+
+//////////////////////////////////method 2 
+
+#include <iostream>
+
+using namespace std;
+
+int findSum(string str)
+{
+    int sum = 0;
+
+    for (char ch : str)
+    {
+        if (isdigit(ch))
+        {
+            sum += ch - '0';//here 0 value in ascii is 48
+        }
+    }
+    return sum;
+}
+
+int main()
+{
+    string str;
+    cout << "Enter a string:" << endl;
+
+    getline(cin,str);
+    cout << "Sum :" << findSum(str) << endl;
+}
+
+
+//////////////////method 3
+#include<iostream> 
+#include<string.h>
+using namespace std;
+int main()
+{
+ char str[100];
+ int i,sum = 0;
+ cout<<"Enter a string: ";
+ cin>>str;
+ for (i= 0; str[i] != '\0'; i++)
+ {
+ if ((str[i] >= '0') && (str[i] <= '9'))
+ {
+ sum += (str[i] - '0');
+ }
+ }
+ cout<<"Sum is: "<<sum;
+ return 0;
+ }
+
+
