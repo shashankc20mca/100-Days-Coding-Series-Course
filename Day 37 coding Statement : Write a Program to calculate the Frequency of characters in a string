@@ -1,0 +1,48 @@
+#include<iostream>
+#include<string>
+using namespace std;
+int main(){
+string s,n;
+int c=1,le,b=0;
+cout<<"Enter the string"<<endl;
+getline(cin,s);
+le=s.length();
+int arr[le];
+for(int i=0;i<s.length();i++){
+    if(i==0){
+        n.push_back(s[i]);
+        arr[b]=1;
+         b++;
+    }
+    else{
+        for(int e=0;e<n.length();e++){
+            if(n[e]==s[i]){
+                c=c+1;
+                arr[e]=arr[e]+1;
+            }
+
+        }
+        if(c>1){
+                c=1;
+            continue;
+
+        }
+        else{
+                arr[b]=1;
+            n.push_back(s[i]);
+             b++;
+        }
+    }
+
+}
+for(int i=0;i<n.length();i++){
+    cout<<"the frequency of "<<n[i]<<" is "<<arr[i]<<endl;
+}
+
+
+
+return 0;
+}
+
+
+
