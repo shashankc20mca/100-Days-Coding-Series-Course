@@ -1,0 +1,38 @@
+#include<iostream>
+#include<string>
+
+using namespace std;
+int main()
+{
+    string s,t;
+    int r=1;
+    cout<<"Enter the string"<<endl;
+    getline(cin,s);
+    for(int i=0;i<s.length();i++){
+            if(i<s.length()-1){
+        for(int d=i+1;d<s.length();d++){
+            if(s[d]==s[i]){
+                r=r+1;
+                break;
+            }
+        }}
+        if(i>=1){
+            for(int c=i-1;c>=0;c--){
+                if(s[c]==s[i]){
+                    r=r+1;
+                    break;
+                }
+            }
+        }
+        if(r>1){
+                r=1;
+            continue;
+        }
+        else{
+            t.push_back(s[i]);
+        }
+
+    }
+    cout<<t;
+    return 0;
+}
