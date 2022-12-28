@@ -1,0 +1,88 @@
+#include<iostream>
+#include<string>
+using namespace std;
+int main(){
+    int i,c=0,l;
+    string o,s,n,f;
+    cout<<"Enter the string"<<endl;
+    cin>>o;
+    cout<<"Enter the string to remove"<<endl;
+    cin>>s;
+    cout<<"Enter the string to replace"<<endl;
+    cin>>n;
+    l=o.length()-1;
+    for(i=0;i<o.length();i++){
+            int st=i;
+        if(s[0]==o[i]){
+            for(int r=1;r<s.length();r++){
+                    st=st+1;
+                if(s[r]==o[st]){
+                    c=c+1;
+                }
+            }
+
+            if(c==s.length()-1){
+                    for(int h=st;h>=i;h--){
+                        o[h]=' ';
+                    }
+break;
+            }
+else{
+    continue;
+}
+        }
+        else{
+            continue;
+        }
+    }
+
+    if(o[0]==' ')
+
+    {
+        f=n;
+        for(int i=0;i<o.length();i++){
+            if(o[i]==' '){
+                continue;
+            }
+            else{
+                f.push_back(o[i]);
+            }
+        }
+
+    }
+else if(o[l]==' '){
+    for(int i=0;i<o.length();i++){
+            if(o[i]==' '){
+                continue;
+            }
+            else{
+                f.push_back(o[i]);
+            }
+}
+f=f+n;
+}
+else{
+    for(i=0;i<o.length();i++){
+            if(o[i]==' '){
+                break;
+            }
+            else{
+                f.push_back(o[i]);
+            }
+}
+
+   f=f+n;
+for(int j=i;j<o.length();j++){
+               if(o[j]!=' '){
+                f.push_back(o[j]);
+            }
+
+
+
+
+}}
+cout<<f;
+
+return 0;
+}
+
