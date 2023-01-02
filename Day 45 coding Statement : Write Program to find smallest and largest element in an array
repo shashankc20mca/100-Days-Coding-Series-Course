@@ -1,0 +1,29 @@
+#include<iostream>
+using namespace std;
+int main(){
+    int s,sm,l=0;
+    cout<<"Enter the size of array"<<endl;
+    cin>>s;
+    int arr[s];
+    cout<<"Enter the elements of the array separated by space"<<endl;
+    for(int i=0;i<s;i++){
+    cin>>arr[i];
+    }
+    sm=arr[0];
+for(int i=0;i<s;i++){
+    if(arr[i]>l){
+        l=arr[i];}
+    if(sm>arr[i]){
+        sm=arr[i];
+    }
+
+}
+cout<<"The largest number is "<<l<<endl;
+cout<<"The smallest number is "<<sm<<endl;
+
+
+
+
+return 0;
+}
+
