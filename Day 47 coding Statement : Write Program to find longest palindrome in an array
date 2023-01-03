@@ -1,0 +1,37 @@
+#include<iostream>
+using namespace std;
+int main(){
+int n,l=0;
+cout<<"Enter the number of elements in the array"<<endl;
+cin>>n;
+int arr[n];
+cout<<"Enter the elements of the array separated by space"<<endl;
+for(int i=0;i<n;i++){
+    cin>>arr[i];
+
+}
+for (int i=0;i<n;i++){
+     int d,rev=0;
+     d=arr[i];
+
+    while(d!=0){
+        rev=((rev*10)+(d%10));
+        d=d/10;
+
+        }
+if(rev==arr[i]){
+            if(rev>l){
+                l=rev;
+            }
+
+
+    }
+}
+cout<<l;
+
+
+
+
+return 0;
+}
+
