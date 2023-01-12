@@ -1,0 +1,40 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+  int n,p=0;
+  cout<<"Enter the size of array"<<endl;
+  cin>>n;
+ int arr1[n],arr2[n];
+  cout<<"Enter the elements of first array"<<endl;
+  for(int i=0;i<n;i++){
+  cin>>arr1[i];
+  }
+  cout<<"Enter the elements of second array"<<endl;
+ for (int i=0;i<n;i++){
+  cin>>arr2[i];
+  }
+  for(int i =0;i<n;i++){
+      for (int q=i+1;q<n;q++)
+  {
+
+      if(arr1[i]<arr1[q]){
+        int  s=arr1[i];
+        arr1[i]=arr1[q];
+        arr1[q]=s;
+      }
+  if(arr2[i]<arr2[q]){
+        int  s=arr2[i];
+        arr2[i]=arr2[q];
+        arr2[q]=s;
+      }
+
+  }
+  }
+  for(int i=0;i<n;i++){
+     p=p+(arr1[i]*arr2[i]) ;
+  }
+  cout<<p;
+
+  return 0;
+}
