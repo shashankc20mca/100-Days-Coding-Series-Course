@@ -1,0 +1,45 @@
+#include<iostream>
+using namespace std;
+int main(){
+    int n,r,s=0,x=0;
+    cout<<"Enter the number of elements of the array"<<endl;
+    cin>>n;
+    int arr[n];
+    cout<<"Enter the elements of the array"<<endl;
+    for(int i=0;i<n;i++){
+        cin>>arr[i];
+    }
+    for(int i=0;i<n;i++)
+{
+    for(int b=i+1;b<n;b++){
+        if(arr[i]<arr[b]){
+            int t;
+            t=arr[i];
+            arr[i]=arr[b];
+            arr[b]=t;
+        }
+    }
+}
+for(int i=2;i<10;i++){
+    r=arr[0]*i;
+    for(int p=1;p<n;p++){
+
+        if(r%arr[p]==0){
+            s=s+1;
+        }
+    }
+    if(s==n-1){
+        x=1;
+        break;
+    }
+    s=0;
+}
+
+if(x==1){
+    cout<<"yes"<<endl;
+
+}
+else{
+    cout<<"No"<<endl;
+}
+return 0;}
