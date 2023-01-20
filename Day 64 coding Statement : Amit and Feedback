@@ -1,0 +1,47 @@
+#include<iostream>
+#include<string>
+using namespace std;
+int main()
+{
+int t;
+cout<<"Enter the number of testcases"<<endl;
+cin>>t;
+for(int i=0;i<t;i++)
+{
+string str;
+cout<<"Enter the string"<<endl;
+cin>>str;
+string s;
+int c=0,d=0;
+for(int i=0;i<str.length();i++)
+{
+s.push_back(str[i]);
+c=c+1;
+if(c==3)
+{
+if(s=="101"|s=="010")
+{
+d=1;
+}
+else
+{
+c=0;
+s="";
+}
+}
+if(d==1)
+{
+cout<<"good"<<endl;
+break;
+}
+}
+if(d==0){
+cout<<"bad"<<endl;
+
+}
+}
+
+
+
+
+return 0;}
