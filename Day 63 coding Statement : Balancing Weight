@@ -1,0 +1,26 @@
+#include<iostream>
+using namespace std;
+int main(){
+    int t;
+    cout<<"Enter the number of testcases"<<endl;
+    cin>>t;
+    for(int i=1;i<=t;i++){
+            int w1,w2,x1,x2,m,b,h;
+        cout<<"Enter the "<<i<<" testcase separated by space"<<endl;
+        cin>>w1>>w2>>x1>>x2>>m;
+        if(w2>w1){
+    b=(x1*m)+w1;
+    h=(x2*m)+w1;
+    if(w2>=b&w2<=h){
+        cout<<"1"<<endl;
+    }
+    else{
+        cout<<"0"<<endl;
+    }}
+    else{
+        cout<<"Invalid input"<<endl;
+    }
+    }
+
+
+return 0;}
