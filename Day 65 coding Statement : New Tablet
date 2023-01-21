@@ -1,0 +1,42 @@
+#include<iostream>
+using namespace std;
+int main(){
+    int T;
+    cout<<"Enter the number of testcases"<<endl;
+    cin>>T;
+    for(int i=0;i<T;i++){
+        int N,B,g=0,c=0;
+        cout<<"Enter the number of available tablets and budget separated by space"<<endl;
+        cin>>N>>B;
+        for(int i=1;i<=N;i++){
+            int wi,pi,hi;
+            cout<<"Enter the width height and price of tablet "<<i<<" separated by space"<<endl;
+            cin>>wi>>hi>>pi;
+            if(pi<=B){
+                    c=c+1;
+            int p;
+            p=wi*hi;
+            if(p>g){
+                g=p;
+            }
+            }
+
+
+        }
+        if(c==0){
+            cout<<"no tablet"<<endl;
+        }
+        else{        cout<<g<<endl;}
+
+
+
+
+    }
+
+
+
+
+
+
+return 0;
+}
