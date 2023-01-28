@@ -1,0 +1,25 @@
+#include<iostream>
+using namespace std;
+ class isosceles{
+public:
+    void myfunc2(){
+     cout<<"I am an isosceles triangle i am a triangle"<<endl;}
+ };
+ class equilateral:public isosceles{
+ public :
+     void myfunc1(){
+ cout<<"I am an equilateral triangle"<<endl;}
+
+ };
+
+
+
+int main(){
+isosceles obj1;
+obj1.myfunc1();
+obj1.myfunc2();
+
+
+
+
+return 0;}
