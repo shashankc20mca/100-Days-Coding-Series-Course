@@ -1,0 +1,48 @@
+#include<iostream>
+using namespace std;
+int main(){
+int n;
+cout<<"Enter the number of queries"<<endl;
+cin>>n;
+int arr[n],c=0,r=0;
+for(int i=1;i<=n;i++){
+    int t,g;
+    cout<<"Enter the type of query and integer separated by space"<<endl;
+    cin>>t>>g;
+    if(t==1){
+        arr[r]=g;
+       r=r+1;
+    c=c+1;
+    }
+    else if(t==2){
+        for(int i=0;i<c-1;i++){
+            if(arr[i]==g){
+                for(int v=i;v<c;v++){
+                        arr[v]=arr[v+1];
+                }
+            }
+        }
+    }
+    else if(t==3){
+        int d=0;
+        for(int i=0;i<c;i++){
+
+            if(arr[i]==g){
+                cout<<"yes"<<endl;
+        d=d+1;
+        break;
+            }
+        }
+        if(d==0){cout<<"NO"<<endl;}
+    }
+
+
+
+
+
+}
+
+
+
+return 0;
+}
